@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>শুভ শারদীয়া</title>
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;height:100%;overflow:hidden}
+body{
+  font-family:"Noto Serif Bengali","Nirmala UI",serif;
+  background:
+    radial-gradient(circle at 50% 38%,rgba(255,224,166,.35),transparent 28%),
+    linear-gradient(180deg,#5b1625 0%,#8b3040 42%,#d18a67 100%);
+  color:#fff8e8;
+}
+.page{
+  position:relative;width:100vw;height:100vh;overflow:hidden;
+  display:flex;align-items:center;justify-content:center;
+  isolation:isolate;
+}
+.page:before{
+  content:"";position:absolute;inset:0;z-index:-3;
+  opacity:.38;
+  background:
+    repeating-linear-gradient(78deg,transparent 0 48px,rgba(255,255,255,.035) 49px 51px),
+    radial-gradient(ellipse at 20% 90%,rgba(255,255,255,.25),transparent 22%),
+    radial-gradient(ellipse at 80% 88%,rgba(255,255,255,.2),transparent 25%);
+}
+.kash{
+  position:absolute;left:-5%;right:-5%;bottom:-2px;height:28%;
+  z-index:-1;opacity:.22;filter:blur(1.2px);
+}
+.kash span{
+  position:absolute;bottom:-5px;width:3px;height:170px;background:#f9f1dc;
+  border-radius:100%;transform-origin:bottom;
+}
+.kash span:after{
+  content:"";position:absolute;top:18px;left:-9px;width:20px;height:90px;
+  border-radius:50%;border:2px solid rgba(255,250,232,.8);
+  transform:rotate(15deg);
+}
+.leaves{position:absolute;inset:0;z-index:5;pointer-events:none}
+.leaf{
+  position:absolute;top:-50px;width:18px;height:28px;
+  background:linear-gradient(135deg,#b62f27,#e07b3f);
+  border-radius:3px 15px 3px 15px;
+  box-shadow:0 2px 8px rgba(40,0,0,.18);
+  opacity:.75;
+  animation:fall linear infinite;
+}
+.leaf:after{
+  content:"";position:absolute;left:8px;top:2px;width:1px;height:24px;
+  background:rgba(90,30,15,.55);transform:rotate(-15deg)
+}
+@keyframes fall{
+  0%{transform:translate3d(0,-60px,0) rotate(0deg);opacity:0}
+  10%{opacity:.75}
+  50%{margin-left:55px}
+  100%{transform:translate3d(-35px,110vh,0) rotate(420deg);opacity:.08}
+}
+.durga-wrap{
+  position:relative;width:min(390px,74vw);height:min(470px,70vh);
+  display:flex;align-items:center;justify-content:center;
+  animation:appear 1.7s ease both;
+}
+@keyframes appear{from{opacity:0;transform:translateY(18px) scale(.96)}to{opacity:1;transform:none}}
+.durga-glow{
+  position:absolute;width:85%;height:85%;border-radius:50%;
+  background:radial-gradient(circle,rgba(255,214,124,.38),transparent 62%);
+  filter:blur(10px);
+}
+.durga{
+  position:relative;width:235px;height:310px;
+  filter:drop-shadow(0 14px 20px rgba(44,5,8,.38));
+}
+.crown{
+  position:absolute;left:50%;top:2px;transform:translateX(-50%);
+  width:118px;height:78px;background:linear-gradient(90deg,#b9781e,#ffe08a,#b9781e);
+  clip-path:polygon(0 100%,12% 28%,27% 55%,50% 0,73% 55%,88% 28%,100% 100%);
+  border:2px solid #f9d779;
+}
+.face{
+  position:absolute;left:50%;top:58px;transform:translateX(-50%);
+  width:128px;height:158px;
+  background:linear-gradient(90deg,#e89b69,#ffd09a 50%,#dc855e);
+  border-radius:48% 48% 44% 44% / 40% 40% 58% 58%;
+  border:3px solid #8e382c;
+}
+.hair{
+  position:absolute;left:50%;top:45px;transform:translateX(-50%);
+  width:165px;height:185px;background:#211417;border-radius:50% 50% 42% 42%;
+  z-index:-1;
+}
+.eye{position:absolute;top:67px;width:38px;height:15px;border-top:3px solid #4b1d1d;border-radius:50%}
+.eye.left{left:17px}.eye.right{right:17px}
+.pupil{position:absolute;top:-1px;left:15px;width:7px;height:7px;background:#251313;border-radius:50%}
+.nose{position:absolute;left:61px;top:82px;width:7px;height:35px;border-right:2px solid #9a4c38;border-radius:50%}
+.mouth{position:absolute;left:43px;top:124px;width:42px;height:18px;border-bottom:4px solid #7d2528;border-radius:50%}
+.bindi{position:absolute;left:50%;top:42px;transform:translateX(-50%);width:12px;height:12px;background:#a31f2a;border-radius:50%;box-shadow:0 0 8px #ffcc65}
+.jewel{position:absolute;width:18px;height:18px;background:#e8ae3c;border:2px solid #fff0a5;border-radius:50%;bottom:31px}
+.jewel.l{left:26px}.jewel.r{right:26px}
+.sari{
+  position:absolute;left:50%;top:187px;transform:translateX(-50%);
+  width:205px;height:123px;background:linear-gradient(135deg,#a51e35,#e28a4d,#9d2136);
+  clip-path:polygon(20% 0,80% 0,100% 100%,0 100%);
+  border:3px solid #f3c15b;
+}
+.trishul{
+  position:absolute;right:-55px;top:76px;width:7px;height:190px;background:#e7bd57;
+  transform:rotate(13deg);border-radius:5px;box-shadow:0 0 6px #ffe49b;
+}
+.trishul:before{
+  content:"";position:absolute;top:-18px;left:-17px;width:40px;height:40px;
+  border-top:5px solid #e7bd57;border-radius:50%;
+}
+.incense{
+  position:absolute;bottom:8%;width:80px;height:80px;z-index:3;
+  animation:incensePulse 3s ease-in-out infinite;
+}
+.incense.left{left:8%}.incense.right{right:8%}
+.stick{
+  position:absolute;bottom:0;left:39px;width:4px;height:52px;background:#56351f;
+  transform:rotate(8deg);
+}
+.smoke{
+  position:absolute;bottom:45px;left:25px;width:35px;height:65px;
+  border-radius:50%;filter:blur(3px);opacity:.55;
+  border-left:5px solid rgba(245,240,225,.65);
+  animation:smoke 4s ease-in-out infinite;
+}
+.smoke.s2{left:43px;bottom:48px;animation-delay:1.3s}
+@keyframes smoke{
+  0%{transform:translateY(12px) scale(.65) rotate(0);opacity:0}
+  30%{opacity:.6}
+  100%{transform:translate(-16px,-65px) scale(1.5) rotate(25deg);opacity:0}
+}
+@keyframes incensePulse{50%{transform:translateY(-4px)}}
+.title{
+  position:absolute;top:5.5%;left:0;right:0;text-align:center;z-index:8;
+  font-size:clamp(30px,6vw,62px);font-weight:700;
+  letter-spacing:2px;text-shadow:0 4px 16px rgba(50,0,0,.5);
+  animation:titleGlow 2.8s ease-in-out infinite alternate;
+}
+@keyframes titleGlow{to{text-shadow:0 0 22px rgba(255,218,137,.8),0 4px 16px rgba(50,0,0,.5)}}
+.subtitle{
+  position:absolute;top:14%;left:0;right:0;text-align:center;z-index:8;
+  font-size:clamp(14px,2.2vw,22px);opacity:.9;letter-spacing:1px;
+}
+.nameBox{
+  position:absolute;z-index:20;left:50%;top:50%;transform:translate(-50%,-50%) scale(.7);
+  width:min(430px,88vw);padding:25px 22px;border-radius:24px;
+  background:rgba(54,9,20,.78);backdrop-filter:blur(12px);
+  border:1px solid rgba(255,220,157,.5);
+  box-shadow:0 20px 60px rgba(30,0,0,.4);
+  text-align:center;opacity:0;pointer-events:none;
+  transition:1s ease;
+}
+.nameBox.show{opacity:1;transform:translate(-50%,-50%) scale(1);pointer-events:auto}
+.nameBox h2{margin:0 0 14px;font-size:25px}
+.nameBox input{
+  width:100%;padding:14px 16px;border-radius:14px;border:1px solid #e8bd71;
+  outline:0;background:rgba(255,248,228,.96);color:#5a1722;font-size:18px;text-align:center;
+}
+.nameBox button{
+  margin-top:12px;padding:11px 28px;border:0;border-radius:12px;
+  background:linear-gradient(135deg,#f0b34c,#ffe08b);color:#5a1722;
+  font-size:17px;font-weight:700;cursor:pointer;
+}
+.wish{
+  position:absolute;z-index:25;inset:0;display:flex;align-items:center;justify-content:center;
+  text-align:center;opacity:0;pointer-events:none;padding:25px;
+}
+.wish.show{opacity:1;pointer-events:auto}
+.wishCard{
+  max-width:760px;padding:35px 25px;
+  animation:wishIn 1.6s cubic-bezier(.17,.67,.28,1.2) both;
+}
+@keyframes wishIn{from{transform:translateY(50px) scale(.7);opacity:0}to{transform:none;opacity:1}}
+.wish .big{
+  font-size:clamp(42px,8vw,82px);font-weight:800;
+  background:linear-gradient(90deg,#ffe7a3,#fff,#ffd477,#fff);
+  background-size:250% auto;color:transparent;background-clip:text;
+  -webkit-background-clip:text;animation:shine 4s linear infinite;
+  text-shadow:0 0 22px rgba(255,203,104,.25);
+}
+@keyframes shine{to{background-position:250% center}}
+.wish .name{
+  margin-top:10px;font-size:clamp(30px,5vw,54px);color:#fff4ce;font-weight:700;
+  text-shadow:0 0 18px rgba(255,211,116,.7);
+}
+.wish p{font-size:clamp(17px,2.6vw,25px);line-height:1.7;margin:17px auto 0;max-width:650px}
+.sparkles{position:absolute;inset:0;pointer-events:none}
+.spark{
+  position:absolute;width:5px;height:5px;background:#ffe9a8;border-radius:50%;
+  animation:spark 2.5s ease-in-out infinite;
+}
+@keyframes spark{0%,100%{opacity:0;transform:scale(.3)}50%{opacity:1;transform:scale(1.5)}}
+.credit{
+  position:absolute;bottom:12px;left:0;right:0;text-align:center;font-size:11px;
+  opacity:.35;z-index:30
+}
+@media(max-width:600px){
+ .durga-wrap{transform:scale(.82)}
+ .incense{transform:scale(.72)}
+ .title{top:6%}.subtitle{top:15%}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="leaves" id="leaves"></div>
+
+  <div class="kash">
+    <span style="left:3%;transform:rotate(-10deg)"></span><span style="left:8%;transform:rotate(8deg)"></span>
+    <span style="left:14%;transform:rotate(-7deg)"></span><span style="left:21%;transform:rotate(12deg)"></span>
+    <span style="left:29%;transform:rotate(-8deg)"></span><span style="left:37%;transform:rotate(7deg)"></span>
+    <span style="left:46%;transform:rotate(-10deg)"></span><span style="left:54%;transform:rotate(9deg)"></span>
+    <span style="left:62%;transform:rotate(-7deg)"></span><span style="left:70%;transform:rotate(10deg)"></span>
+    <span style="left:78%;transform:rotate(-8deg)"></span><span style="left:86%;transform:rotate(7deg)"></span>
+    <span style="left:94%;transform:rotate(-10deg)"></span>
+  </div>
+
+  <div class="title">শুভ শারদীয়া</div>
+  
+  <div class="subtitle">মা দুর্গার আগমনে শুভ হোক সকলের জীবন</div>
+
+  <div class="incense left">
+    <div class="stick"></div><div class="smoke"></div><div class="smoke s2"></div>
+  </div>
+  <div class="incense right">
+    <div class="stick"></div><div class="smoke"></div><div class="smoke s2"></div>
+  </div>
+
+  <div class="durga-wrap" id="durgaWrap">
+    <div class="durga-glow"></div>
+    <div class="durga">
+      <div class="hair"></div>
+      <div class="crown"></div>
+      <div class="face">
+        <div class="bindi"></div>
+        <div class="eye left"><span class="pupil"></span></div>
+        <div class="eye right"><span class="pupil"></span></div>
+        <div class="nose"></div><div class="mouth"></div>
+      </div>
+      <div class="jewel l"></div><div class="jewel r"></div>
+      <div class="sari"></div>
+      <div class="trishul"></div>
+    </div>
+  </div>
+
+  <div class="nameBox" id="nameBox">
+    <h2>তোমার নাম লেখো</h2>
+    <input id="nameInput" type="text" maxlength="40" placeholder="এখানে নাম লেখো ...." autocomplete="off">
+    <button id="wishBtn">Click শুভেচ্ছা</button>
+  </div>
+
+  <div class="wish" id="wish">
+    <div class="wishCard">
+      <div class="big">শুভ শারদীয়া</div>
+      <div class="name" id="wishName"></div>
+      <p>মা দুর্গার আশীর্বাদে তোমার জীবন ভরে উঠুক<br>
+      আনন্দ, শান্তি, ভালোবাসা ও নতুন আশায়।<br>
+      <b>শারদীয়ার আন্তরিক শুভেচ্ছা ও প্রীতি।</b></p>
+    </div>
+    <div class="sparkles" id="sparkles"></div>
+  </div>
+
+  <div class="credit">শুভ শারদীয়া by ~NrS</div>
+</div>
+
+<script>
+const leaves = document.getElementById("leaves");
+for(let i=0;i<22;i++){
+  const l=document.createElement("div");
+  l.className="leaf";
+  l.style.left=(Math.random()*100)+"%";
+  l.style.animationDuration=(9+Math.random()*9)+"s";
+  l.style.animationDelay=(-Math.random()*16)+"s";
+  l.style.transform=`scale(${.65+Math.random()*.7})`;
+  leaves.appendChild(l);
+}
+
+setTimeout(()=>{
+  document.getElementById("nameBox").classList.add("show");
+  document.getElementById("nameInput").focus();
+},4000);
+
+function showWish(){
+  const name=document.getElementById("nameInput").value.trim();
+  if(!name){document.getElementById("nameInput").focus();return;}
+  document.getElementById("wishName").textContent=name+"-কে";
+  document.getElementById("nameBox").classList.remove("show");
+  document.getElementById("durgaWrap").style.opacity="0";
+  document.querySelector(".title").style.opacity="0";
+  document.querySelector(".subtitle").style.opacity="0";
+  document.getElementById("wish").classList.add("show");
+
+  const s=document.getElementById("sparkles");
+  for(let i=0;i<35;i++){
+    const x=document.createElement("span");x.className="spark";
+    x.style.left=Math.random()*100+"%";x.style.top=Math.random()*100+"%";
+    x.style.animationDelay=Math.random()*2.5+"s";
+    s.appendChild(x);
+  }
+}
+document.getElementById("wishBtn").addEventListener("click",showWish);
+document.getElementById("nameInput").addEventListener("keydown",e=>{
+  if(e.key==="Enter")showWish();
+});
+</script>
+</body>
+</html>
